@@ -38,3 +38,27 @@ export const VisibilityFilters = {
   SHOW_COMPLETED: 'SHOW_COMPLETED',
   SHOW_ACTIVE: 'SHOW_ACTIVE'
 }
+
+export const makeASandwich =(forPerson, secretSauce)=> {
+  return {
+    type: 'MAKE_SANDWICH',
+    forPerson,
+    secretSauce
+  };
+}
+
+export const apologize=(fromPerson, toPerson, error)=> {
+  return {
+    type: 'APOLOGIZE',
+    fromPerson,
+    toPerson,
+    error
+  };
+}
+
+export const withdrawMoney=(amount)=> {
+  return {
+    type: 'WITHDRAW',
+    amount
+  };
+}

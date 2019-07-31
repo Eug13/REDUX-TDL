@@ -4,7 +4,6 @@ import { addTodo } from '../actions'
 
 const AddTodo = ({ dispatch }) => {
   let input
-
   return (
     <div className='add_form'>
       <form
@@ -19,11 +18,12 @@ const AddTodo = ({ dispatch }) => {
       >
         <input ref={node => input = node} placeholder="Add Todo"/>
         <button type="submit">
-        <i class="fas fa-plus"></i> Add Todo
+        <i className="fas fa-plus"></i> Add Todo
         </button>
       </form>
     </div>
   )
 }
+
 
 export default connect()(AddTodo)

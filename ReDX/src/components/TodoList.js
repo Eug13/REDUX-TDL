@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Todo from './Todo'
 
-const TodoList = ({ todos, toggleTodo ,delTodo}) => (
+const TodoList = ({ todos,bread, toggleTodo ,delTodo}) => (
   <ul>
     {todos.map(todo =>
       <Todo
@@ -12,8 +12,16 @@ const TodoList = ({ todos, toggleTodo ,delTodo}) => (
       id={todo.id}
       />
     )}
+    {showBread(bread)}
+
   </ul>
 )
+
+
+const showBread =(bread)=>{
+
+return bread.map((i,index) => <div key={index}>For: {i.forPerson}  secret: {i.secretSauce.title}</div>)
+}
 
 TodoList.propTypes = {
   todos: PropTypes.arrayOf(

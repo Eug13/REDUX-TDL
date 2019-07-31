@@ -6,6 +6,7 @@ import EditTodo from '../containers/EditTodo'
 
 const Todo = ({ onClick, completed, text, dispatch,edit, id }) => (
   <div>
+
   <li
     onClick={onClick}
     style={ {
